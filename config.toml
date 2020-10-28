@@ -3,11 +3,14 @@ languageCode = "en-us"
 title = "My Portfolio"
 theme = "aafu"
 
+[blackfriday]
+  extensions = ["hardLineBreak"]
+
 [params]
     title = "Мокрушин Александр. Технический писатель"
     author = "Мокрушин Александр"
     description = "Резюме"
-    # copyright = "aaa"
+    # copyright = ""
 
     [params.theme]
         # Available themes are 'light', 'dark', and 'pinkish'
@@ -68,9 +71,11 @@ theme = "aafu"
     [[params.showInAccordion]]
         item = "education"
     [[params.showInAccordion]]
-        item = "publication"
-    [[params.showInAccordion]]
         item = "project"
+    [[params.showInAccordion]]
+        item = "portfolio"
+    [[params.showInAccordion]]
+        item = "publication"
     [[params.showInAccordion]]
         item = "skill"
     [[params.showInAccordion]]
@@ -79,125 +84,407 @@ theme = "aafu"
     [params.aboutme]
         title = "Обо мне"
         icon = "fas fa-user"
-        description = "**Технический писатель**, ла-ла-ла-ла-ла-ла-ла-ла-ла-ла-ла-ла."
+        description = """
+Меня зовут Александр, я технический писатель.
 
+Разрабатываю документацию на программное обеспечение 9 лет. Помогаю софтверным компаниям создавать удобную и понятную документацию для пользователей, администраторов и разработчиков.
+
+Я не только работаю с текстом, но и:
+
+- внедряю технологии и выстраиваю процессы документирования,
+- обучаю сотрудников,
+- управляю командой,
+- пишу тексты для интерфейсов,
+- автоматизирую разработку документации,
+- помогаю писать инженерам о технологиях и продуктах компании,
+- развиваю базу знаний.
+
+Мне интересны проекты, в которых используется или внедряется принцип docs as code.
+   """
     # Experience section
     [params.experience]
-        title = "Experiences"
+        title = "Опыт работы"
         icon = "fas fa-briefcase"
 
         [[params.experience.list]]
-            position = "Job Title"
-            dates = "2019 - *Present*"
-            company = "Company Name"
-            details = "Printed from desktop. Sent [emails](#). Called people using telephone. Drank water from office cooler. Ate donuts on people's birthdays."
+            position = ""
+            dates = "Май 2019 – настоящее время"
+            link = "https://www.performance-lab.ru/"
+            company = "Performance Lab"
+            details = """
+- Ведение базы знаний и разработка документации на проекте «Нагрузочное тестирование систем ВТБ»
+- Разработка документации и ПМИ на функциональные блоки АПК «Безопасный город», адаптеры «КАМИ» и «Кобра»
+- Технологическая поддержка документирования
+   """
         [[params.experience.list]]
-            position = "Job Title"
-            dates = "2018 - 2019"
+            position = ""
+            dates = "Январь 2018 – май 2019"
+            link = "https://technoserv.com/"
+            company = "Техносерв Менеджмент"
+            details = """
+- Разработка документации, ТЗ, ПМИ на программные комплексы ЕГИССО и «Клиентская служба ПФР»
+- Управление командой
+- Работа с новыми сотрудниками и кандидатами
+- Администрирование Confluence
+- Технологическая поддержка документирования
+   """
+        [[params.experience.list]]
+            position = ""
+            dates = "Июль 2017 – декабрь 2017"
             link = "#"
-            company = "Company Name"
+            company = "Онлайн-Решения"
+            details = """
+- Разработка документации, ТЗ, ПМИ на программный комплекс «Клиентская служба ПФР»
+- Администрирование Confluence
+- Технологическая поддержка документирования
+   """
+        [[params.experience.list]]
+            position = ""
+            dates = "Октябрь 2011 – июль 2017"
+            link = "https://www.directum.ru/"
+            company = "Directum"
+            details = """
+- Разработка документации для систем: DIRECTUM, Prestima, КАС «Бизнес Люкс», Synerdocs
+- Управление командой
+- Разработка функциональности веб-справки
+- Создание обучающих видеороликов
+- Работа с новыми сотрудниками и кандидатами
+- UX-аналитика
+- Технологическая поддержка документирования
+   """
 
     # Education section
     [params.education]
-        title = "Education"
+        title = "Образование"
         icon = "fas fa-graduation-cap"
 
         [[params.education.list]]
-            degree = "Ph.D. in Subject"
-            college = "University of State-City"
-            dates = "2013 - 2018"
-            thesis_title = "Effect of humans on other humans: a study of human behavior."
-            thesis_link = "#"
-        [[params.education.list]]
-            degree = "M.S. in Subject"
-            college = "University of State-City"
-            dates = "2013 - 2018"
-            thesis_title = "Effect of humans on other humans: a study of human behavior."
-            thesis_link = "#"
-        [[params.education.list]]
-            degree = "B.S. in Subject"
-            college = "University of State-City"
-            dates = "2004 - 2009"
+            college = "Ижевский государственный технический университет им. М.Т. Калашникова"
+            dates = "2005 – 2010"
+            #degree = "Специалист по защите информации"
+            degree = "Специалист по защите информации"
+            code = "090105"
+            spec = "Комплексное обеспечение информационной безопасности автоматизированных систем"
+            # thesis_title = "Комплексное обеспечение информационной безопасности автоматизированных систем"
+            # thesis_link = "#"
 
     # Publication section
     [params.publication]
-        title = "Publications"
+        title = "Публикации"
         icon = "fas fa-book"
         #The order below determines the order in which the items appear in "Publications" section
-        format = ["date", "authors", "title", "journal"]
+        format = ["title", "date", "journal"]
         #If you don't want to group publications, comment the line below by adding # at the beginning
         types = ["Journal Articles", "Proceedings"]
 
         [[params.publication.list]]
-            title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            authors = "F Last, F Second, P secondary"
-            date = "2018"
-            journal = "Journal of Field 52 (16), 9033-9044"
-            link = "#"
+            title = "Повышаем масштабируемость с DIRECTUM 5.4"
+            authors = ""
+            date = "10 апреля 2017"
+            journal = "· Directum Club"
+            link = "https://club.directum.ru/post/72375"
             type = "Journal Articles"
 
         [[params.publication.list]]
-            title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            authors = "F Last, F Second, P secondary"
-            date = "2018"
-            journal = "Journal of Field 52 (16), 9033-9044"
-            link = "#"
+            title = "Развиваем подписание и шифрование в DIRECTUM 5.4"
+            authors = ""
+            date = "3 апреля 2017"
+            journal = "· Directum Club"
+            link = "https://club.directum.ru/post/72268"
             type = "Journal Articles"
 		
         [[params.publication.list]]
-            title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            authors = "F Last, F Second, P secondary"
-            date = "2018"
-            journal = "Journal of Field 52 (16), 9033-9044"
-            link = "#"
-            type = "Proceedings"
+            title = "Управляем выполнением кода на серверах"
+            authors = ""
+            date = "27 марта 2017"
+            journal = "· Directum Club"
+            link = "https://club.directum.ru/post/72134"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "Управляем входящими и исходящими в DIRECTUM 5.3"
+            authors = ""
+            date = "5 сентября 2016"
+            journal = "· Directum Club"
+            link = "https://club.directum.ru/post/1101"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "Веб-доступ, видео, мобильные решения и другие новинки документации"
+            authors = ""
+            date = "27 января 2016"
+            journal = "· Directum Club"
+            link = "https://club.directum.ru/post/1013"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "Сдаем объекты в архив системы"
+            authors = ""
+            date = "14 января 2016"
+            journal = "· Directum Club"
+            link = "https://club.directum.ru/post/1004"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "Создать диалог легко и просто"
+            authors = ""
+            date = "16 декабря 2015"
+            journal = "· Directum Club"
+            link = "https://club.directum.ru/post/987"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "Как добавить свои видеоролики в справку"
+            authors = ""
+            date = "7 августа 2015"
+            journal = "· Directum Club"
+            link = "https://club.directum.ru/post/958"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "Оптимизация и повышение стабильности DIRECTUM 5.1"
+            authors = ""
+            date = "13 февраля 2015"
+            journal = "· Directum Club"
+            link = "https://club.directum.ru/post/904"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "Новинки DIRECTUM 5.1 для разработчиков"
+            authors = ""
+            date = "30 января 2015"
+            journal = "· Directum Club"
+            link = "https://club.directum.ru/post/892"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "Обновленный ISBL-редактор в DIRECTUM 5.1"
+            authors = ""
+            date = "28 января 2015"
+            journal = "· Directum Club"
+            link = "https://club.directum.ru/post/891"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "Справка на новом уровне"
+            authors = ""
+            date = "26 января 2015"
+            journal = "· Directum Club"
+            link = "https://club.directum.ru/post/889"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "Оптимизация репликации в DIRECTUM 5.0"
+            authors = ""
+            date = "11 марта 2014"
+            journal = "· Directum Club"
+            link = "https://club.directum.ru/post/764"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "Агент веб-доступа DIRECTUM 5.0"
+            authors = ""
+            date = "18 февраля 2014"
+            journal = "· Directum Club"
+            link = "https://club.directum.ru/post/748"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "Электронная подпись с помощью Microsoft Outlook 2010"
+            authors = ""
+            date = "4 июня 2013"
+            journal = "· ECM-Journal"
+            link = "https://ecm-journal.ru/post/Ehlektronnaja-podpis-s-pomoshhju-Microsoft-Outlook-2010.aspx"
+            type = "Journal Articles"
 
     # Project section
     [params.project]
-        title = "Projects"
+        title = "Проекты"
         icon = "fas fa-project-diagram"
 
         [[params.project.list]]
-            title = "project"
-            url = "#"
-            description = "Description of the project"
+            title = "Нагрузочное тестирование систем ВТБ"
+            #url = "#"
+            description = """
+- Ведение базы знаний
+- Документирование средств НТ
+- Редактура статей инженеров о технологиях и продуктах компании
+- Обучение сотрудников
+   """
         [[params.project.list]]
-            title = "project"
-            url = "#"
-            description = "Description of the project"
+            title = "АПК «Безопасный город»"
+            url = "http://www.apkbg.ru/"
+            description = """
+- Документирование функциональных модулей АПК БГ, адаптеров «КАМИ» и «Кобра»
+- Разработка ПМИ
+   """
         [[params.project.list]]
-            title = "project"
-            url = "#"
-            description = "Description of the project"
+            title = "ЕГИССО"
+            url = "http://egisso.ru/site/"
+            description = """
+- Документирование ПК ЕГИССО
+- Разработка ТЗ и ПМИ
+- Управление командой
+- Разработка и внедрение стайлгайда
+- Работа с новыми сотрудниками и кандидатами
+- Администрирование Confluence
+   """
         [[params.project.list]]
-            title = "project"
-            url = "#"
-            description = "Description of the project"
+            title = "Клиентская служба ПФР"
+            #url = "#"
+            description = """
+- Документирование ПК «Клиентская служба ПФР»
+- Разработка ТЗ и ПМИ
+- Администрирование Confluence
+   """
+        [[params.project.list]]
+            title = "Directum "
+            url = "https://www.directum.ru/"
+            description =  """
+- Документирование ECM Directum 4.8-5.5
+- Разработка функциональности веб-справки и видеоплеера
+- Управление командой
+- Работа с новыми сотрудниками и кандидатами
+- Создание обучающих видеороликов
+- UX-аналитика и разработка текстов интерфейсов
+- Технологическая поддержка документирования
+   """
+        # [[params.project.list]]
+        #     title = "Synerdocs"
+        #     url = "https://www.synerdocs.ru/"
+        #     description = "Разработка документации"
+        # [[params.project.list]]
+        #     title = "Prestima"
+        #     url = "https://prestima.ru/"
+        #     description = "Разработка документации"
+        # [[params.project.list]]
+        #     title = "КАС «Бизнес-Люкс»"
+        #     url = "https://npo-comp.ru/cms"
+        #     description = "Разработка документации"
 
     # Skill section
-    [params.skill]
-        title = "Skills"
-        panelId = "skill-panel"
-        icon = "fas fa-cogs"
+    # [params.skill]
+    #     title = "Skills"
+    #     panelId = "skill-panel"
+    #     icon = "fas fa-cogs"
 
-        [[params.skill.list]]
-            skill = "Skill 1, Skill 2"
-            skillrating = 90
-        [[params.skill.list]]
-            skill = "Skill 3"
-            skillrating = 80
-        [[params.skill.list]]
-            skill = "Skill 4"
-            skillrating = 50
+    #     [[params.skill.list]]
+    #         skill = "Skill 1, Skill 2"
+    #         skillrating = 90
+    #     [[params.skill.list]]
+    #         skill = "Skill 3"
+    #         skillrating = 80
+    #     [[params.skill.list]]
+    #         skill = "Skill 4"
+    #         skillrating = 50
+
+    # Portfolio section
+    [params.portfolio]
+        title = "Примеры работ"
+        icon = "fas fa-file-code"
+        #The order below determines the order in which the items appear in "Publications" section
+        format = ["title"]
+        #If you don't want to group publications, comment the line below by adding # at the beginning
+        types = ["Учебные проекты", "Документация", "Разработка"]
+
+        [[params.portfolio.list]]
+            title = "Docs as Code"
+            type = "Учебные проекты"
+            link = "https://fish-train.github.io/flnt-test"
+            description = """
+Цель: познакомиться с принципом Docs as Code, изучить технологии и инструменты:
+
+- Foliant – инструмент создания документации,
+- Markdown – язык разметки,
+- Git – система контроля  версий,
+- GitHub Pages – хостинг,
+- Travis CI – веб-сервис для сборки и тестирования ПО,
+- VS Code – текстовый редактор.
+
+Дополнительно рассмотрел работу с Docker, Swagger и GostDOWN.
+   """
+
+        [[params.portfolio.list]]
+            title = "Sphinx и reStructuredText"
+            type = "Учебные проекты"
+            link = "https://sph-learning.readthedocs.io/ru/latest/index.html"
+            description = """
+Цель: познакомиться с Sphinx и reStructuredText.
+
+Задачи:
+
+- Создать проект Sphinx для документации на языке разметки reStructuredText.
+- Генерировать документацию в формате HTML.
+- Генерировать документацию в формате PDF.
+- Хранить исходники в Git.
+- Публиковать сайт с документацией на ReadTheDocs
+   """
+            
+            [[params.portfolio.list]]
+            title = "HelpDesk. Работа с заявками"
+            type = "Документация"
+            link = "https://docs.google.com/document/d/12rFx6z8B30qPU-hLLtOoPsvXAd37ZKr87d-kpAPOghw/edit?usp=sharing"
+            description = """
+Тестовое задание: руководство по работе с заявками для условной системы HelpDesk.
+   """
+
+            [[params.portfolio.list]]
+            title = "Центр администрирования служб DIRECTUM 5.4"
+            type = "Документация"
+            link = "https://club.directum.ru/webhelp/directum/5.4/index.html?ra_dac.htm"
+            description = """
+Раздел в руководстве администратора о сайте для настройки, запуска служб и мониторинга системы. Для доступа необходима регистрация на https://club.directum.ru.
+   """
+
+            [[params.portfolio.list]]
+            title = "Архитектура системы DIRECTUM 5.4"
+            type = "Документация"
+            link = "https://club.directum.ru/webhelp/directum/5.4/index.html?ra_arhitektura_sistemy_directum.htm"
+            description = """
+Описание архитектуры системы с функциональными схемами. Для доступа необходима регистрация на https://club.directum.ru.
+   """
+
+            [[params.portfolio.list]]
+            title = "Серверные события в DIRECTUM 5.4"
+            type = "Документация"
+            link = "https://club.directum.ru/webhelp/directum/5.4/index.html?rr_servernye_sobytiya.htm"
+            description = """
+Раздел в руководстве разработчика об использовании, создании и запуске серверных событий. Для доступа необходима регистрация на https://club.directum.ru.
+   """
+
+            [[params.portfolio.list]]
+            title = "Функциональность веб-справки DIRECTUM 5.4"
+            type = "Разработка"
+            link = "https://club.directum.ru/webhelp/directum/5.4/index.html"
+            description = """
+Шаблон Help&Manual для сборки документации в HTML.
+
+Функции:
+
+- копирование ссылки на страницу;
+- отправка письма в службу поддеержки;
+- переход между страницами с помощью кнопок;
+- полнотекстовый поиск через Zoom Search Engine. 
+
+Для доступа необходима регистрация на https://club.directum.ru.
+   """
+
+            [[params.portfolio.list]]
+            title = "Видеоплеер для веб-справки DIRECTUM 5.4"
+            type = "Разработка"
+            link = "https://club.directum.ru/webhelp/directum/5.4/index.html?collection_videoroliki.htm"
+            description = """
+Видеоплеер с плейлистом, таймкодом и кнопкой копирования ссылки. 
+
+Для доступа необходима регистрация на https://club.directum.ru.
+   """
 
     # Hobby section
-    [params.hobby]
-        title = "Hobbies"
-        icon = "fas fa-gamepad"
+    # [params.hobby]
+    #     title = "Хобби"
+    #     icon = "fas fa-futbol"
 		
-        [[params.hobby.list]]		
-		    hobby = "Cooking"
-        [[params.hobby.list]]		
-		    hobby = "Hiking"
-        [[params.hobby.list]]		
-		    hobby = "Baking"
+    #     [[params.hobby.list]]
+		  #   hobby = "Футбол"
+    #     [[params.hobby.list]]
+		  #   hobby = "Настольные игры"

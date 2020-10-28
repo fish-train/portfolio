@@ -3,7 +3,7 @@
   <dt class="mb-0">
     {{ .position }}
   </dt>
-  <dd class="mb-0 ml-3">
+  <dd class="mb-0">
     <span class="markdownify">{{ .dates | markdownify }}</span>
     &middot;
     {{ if .link }}
@@ -12,6 +12,6 @@
     {{ .company }}
     {{ end }}
   </dd>
-  <dd class="mb-0 ml-4 markdownify">{{ .details | markdownify }}</dd>
+  <dd class="mb-0 ml-2 markdownify">{{ .details | markdownify }}</dd>
 </dl>
 {{ end }}

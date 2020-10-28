@@ -1,11 +1,15 @@
 <dl>
   {{ range.Site.Params.project.list }}
   <dt>
-    <a href="{{ .url }}" style="font-variant: small-caps; ">
+    {{ if .url }}
+    <a href="{{ .url }}">
       {{- .title -}}
     </a>
+    {{ else }}
+    {{- .title -}}
+    {{ end }}
   </dt>
-  <dd class="mb-0 ml-3 markdownify">
+  <dd class="mb-0 ml-2 markdownify">
     {{- .description | markdownify -}}
   </dd>
   {{ end }}
