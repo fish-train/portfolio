@@ -29,7 +29,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Didact Gothic", sans-serif;
+  font-family: var(--h4Font), sans-serif;
 }
 a,
 a:hover,
