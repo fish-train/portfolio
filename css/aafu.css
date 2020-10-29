@@ -100,3 +100,12 @@ a:hover,
 .aafu-border {
   border-color: var(--primaryLinks) !important;
 }
+
+.fas fa-user,
+.fas fa-briefcase,
+.fas fa-graduation-cap,
+.fas fa-book,
+.fas fa-project-diagram,
+.fas fa-file-code {
+  margin-right: 5px;
+}
