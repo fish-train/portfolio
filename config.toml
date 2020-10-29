@@ -14,7 +14,7 @@ theme = "aafu"
 
     [params.theme]
         # Available themes are 'light', 'dark', 'pinkish' and 'green'
-        mainTheme = "light"
+        mainTheme = "green"
         # setting false below will hide 'aafu by darshan' displayed under the profile pic
         showAttribute = false
         singlePage = true
