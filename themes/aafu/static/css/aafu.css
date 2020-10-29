@@ -101,11 +101,6 @@ a:hover,
   border-color: var(--primaryLinks) !important;
 }
 
-.fas fa-user,
-.fas fa-briefcase,
-.fas fa-graduation-cap,
-.fas fa-book,
-.fas fa-project-diagram,
-.fas fa-file-code {
+.fas, .fa {
   margin-right: 5px;
 }
