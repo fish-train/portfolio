@@ -69,17 +69,13 @@ theme = "aafu"
     [[params.showInAccordion]]
         item = "experience"
     [[params.showInAccordion]]
-        item = "education"
-    [[params.showInAccordion]]
         item = "project"
     [[params.showInAccordion]]
         item = "portfolio"
     [[params.showInAccordion]]
         item = "publication"
     [[params.showInAccordion]]
-        item = "skill"
-    [[params.showInAccordion]]
-        item = "hobby"
+        item = "education"
 
     [params.aboutme]
         title = "Обо мне"
@@ -112,6 +108,7 @@ theme = "aafu"
             link = "https://www.performance-lab.ru/"
             company = "Performance Lab"
             details = """
+- Разработка документации на проекте «Внедрение процессов CI/CD для разработки НСУД в НИИ «Восход»
 - Ведение базы знаний и разработка документации на проекте «Нагрузочное тестирование систем ВТБ»
 - Разработка документации и ПМИ на функциональные блоки АПК «Безопасный город», адаптеры «КАМИ» и «Кобра»
 - Технологическая поддержка документирования
@@ -131,7 +128,7 @@ theme = "aafu"
         [[params.experience.list]]
             position = ""
             dates = "Июль 2017 – декабрь 2017"
-            link = "#"
+            #link = "#"
             company = "Онлайн-Решения"
             details = """
 - Разработка документации, ТЗ, ПМИ на программный комплекс «Клиентская служба ПФР»
@@ -302,6 +299,14 @@ theme = "aafu"
         title = "Проекты"
         icon = "fas fa-project-diagram"
 
+        [[params.project.list]]
+            title = "Внедрение процессов CI/CD для разработки НСУД в НИИ «Восход»"
+            #url = "#"
+            description = """
+- Документирование компонентов среды разработки Национальной системы управления данными (НСУД)
+- Документирование процесса CI/CD
+- Разработка ПМИ
+   """
         [[params.project.list]]
             title = "Нагрузочное тестирование систем ВТБ"
             #url = "#"
