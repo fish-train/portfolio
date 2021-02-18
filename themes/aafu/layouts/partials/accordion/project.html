@@ -3,11 +3,14 @@
   <dt>
     {{ if .url }}
     <a href="{{ .url }}">
-      {{- .title -}}
+      <h5 style="text-decoration: none;">{{- .title -}}</h5>
     </a>
     {{ else }}
-    {{- .title -}}
+    <h5 style="text-decoration: none;">{{- .title -}}</h5>
     {{ end }}
+    <p class="mb-0 ml-4 markdownify">
+      {{- .info | markdownify -}}
+    </p>
   </dt>
   <dd class="mb-0 ml-2 markdownify">
     {{- .description | markdownify -}}
